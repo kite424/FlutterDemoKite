@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   }
   Widget _buildMaterialApp(ThemeProvider provider) {
-    // 警告:不要随意调整调用BotToastInit函数的位置111
+    // 警告:不要随意调整调用BotToastInit函数的位置111222
     return Scaffold(
       appBar:  const BaseAppBar("11",bgColor: KColors.kThemeBlueColor,),
       body: Center(
