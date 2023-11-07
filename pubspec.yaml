@@ -30,6 +30,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
   # 状态管理 https://pub.flutter-io.cn/packages/provider
   provider: ^6.0.5
   # flustars很久不维护，可以使用这个替代 https://pub.flutter-io.cn/packages/flustars_flutter3
@@ -42,6 +45,12 @@ dependencies:
   device_info_plus: ^9.0.2
   # 获取版本信息 https://pub.flutter-io.cn/packages/package_info_plus
   package_info_plus: ^4.0.2
+  # 路由管理 https://pub.flutter-io.cn/packages/fluro
+  fluro: ^2.0.5
+  # 屏幕参数适配 https://pub.flutter-io.cn/packages/flutter_screenutil
+  flutter_screenutil: ^5.8.4
+  # 动画 https://pub.flutter-io.cn/packages/animate_do
+  animate_do: ^3.0.2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -72,6 +81,8 @@ flutter:
   assets:
     - assets/images/
     - assets/images/common/
+    - assets/images/routes/
+    - assets/images/tab/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
