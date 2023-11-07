@@ -11,7 +11,7 @@ class _TwoPageState extends State<TwoPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("TwoPage"),
+      child: Text("TwoPage1"),
     );
   }
 }
