@@ -24,6 +24,7 @@ Future<void> main() async {
   await SpUtil.getInstance();
   runApp(const MyApp());
   if (WYDeviceUtils.isAndroid) {
+    //安卓平台
     printLog("Android",StackTrace.current);
   } else if (WYDeviceUtils.isIOS) {
     printLog("iOS",StackTrace.current);
