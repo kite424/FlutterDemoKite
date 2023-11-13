@@ -69,7 +69,8 @@ class _MyHomePageState extends State<MyApp> {
       navigatorKey: KStrings.navigatorKey,
       darkTheme: provider.getThemeData(isDarkMode: true),
       themeMode: provider.getThemeMode(),
-      home: BaseTabBar(),
+      debugShowCheckedModeBanner: false,
+      home: const BaseTabBar(),
       //路由
       onGenerateRoute: Routes.router.generator,
       onUnknownRoute: (RouteSettings setting)=>MaterialPageRoute(builder: (context)=>const NotFoundPage("未知页面")),

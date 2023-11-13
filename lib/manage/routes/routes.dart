@@ -1,5 +1,6 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_kite/manage/routes/home_page_router.dart';
 import 'package:flutter_kite/manage/routes/router_init.dart';
 import 'package:flutter_kite/manage/tabbar/base_tabbar.dart';
 import 'package:flutter_kite/widget/router_notfound_page_404.dart';
@@ -30,8 +31,8 @@ class Routes{
 
     /// 各自路由由各自模块管理，统一在此添加初始化
 
-    _listRouter.add(MainRouter());
-
+    // _listRouter.add(MainRouter());
+    _listRouter.add(HomePageRouter());
     /// 初始化路由
     void initRouter(IRouterProvider routerProvider) {
       routerProvider.initRouter(router);

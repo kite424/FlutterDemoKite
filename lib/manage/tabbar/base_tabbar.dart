@@ -6,13 +6,13 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_kite/manage/tabbar/tabbar_provider.dart';
+import 'package:flutter_kite/project/find/find.dart';
+import 'package:flutter_kite/project/message/message.dart';
+import 'package:flutter_kite/project/mine/mine.dart';
+import 'package:flutter_kite/project/small_world/small_world.dart';
 import 'package:provider/provider.dart';
 
 import '../../common/wy_image_utils.dart';
-import '../../test/four_page.dart';
-import '../../test/one_page.dart';
-import '../../test/three_page.dart';
-import '../../test/two_page.dart';
 import '../../tool/kcolors.dart';
 import '../../widget/animation/wy_pulse_animation_view.dart';
 import '../provider/theme_provider.dart';
@@ -30,7 +30,7 @@ class BaseTabBar extends StatefulWidget {
 
 class _BaseTabBarState extends State<BaseTabBar> {
   // int _currentIndex = 0;
-  final List<Widget> _pageList = const [OnePage(), TwoPage(), ThreePage(), FourPage()];
+  final List<Widget> _pageList = const [Message(), SmallWorld(), Find(), Mine()];
 
   final PageController _pageController = PageController();
 
@@ -39,8 +39,8 @@ class _BaseTabBarState extends State<BaseTabBar> {
 
   List<BottomNavigationBarItem> getBottomTabs(iconColor) {
     return [
-      _createItem('微信', 'tab/nav_tab_1', iconColor),
-      _createItem('通讯录', 'tab/nav_tab_2', iconColor),
+      _createItem('消息', 'tab/nav_tab_1', iconColor),
+      _createItem('小世界', 'tab/nav_tab_2', iconColor),
       _createItem('发现', 'tab/nav_tab_3', iconColor, showBadge: true),
       _createItem('我的', 'tab/nav_tab_4', iconColor),
     ];
@@ -141,7 +141,7 @@ class _BaseTabBarState extends State<BaseTabBar> {
     if (_currentText != label) {
       return child;
     }
-    if (label == '微信') {
+    if (label == '消息') {
       return Swing(child: child); // 摆动
     }
     if (label == '发现') {
